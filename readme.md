@@ -1,3 +1,9 @@
+# Team Z
+
+##
+- LoadModel
+- TrainModel
+
 ## Формат данных
 
 - `data/imdb_small.csv`

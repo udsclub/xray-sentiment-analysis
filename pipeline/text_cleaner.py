@@ -6,6 +6,9 @@ class TextCleaner(TransformerMixin):
     def __init__(self, *args, key='text'):
         """Argument 'key', stands for which column to proceed"""
         self.key = key
+        self.non_word_regex = re.compile('[^a-zA-Z\d\s:_]')
+        self.tag_regex = re.compile('<[^>]*>')
+
 
     def transform(self, X):
         """
@@ -20,11 +23,12 @@ class TextCleaner(TransformerMixin):
     def preprocess(self, text):
         try:
             text = re.sub('-', ' ', text)
-            text = re.sub('<[^>]*>\(\)', '', text)
-            text = re.sub('[^a-zA-Z\d\s:_]', '', text)
-            emoticons = re.findall('(?::|;|=)(?:-)?(?:\)|\(|D|P)', text)
-            text = re.sub('[\W]+', ' ', text.lower()) + ''.join(emoticons).replace('-', '')
-            return text
+            text = self.tag_regex.sub(' ', text)
+            text = self.non_word_regex.sub(' ', text)
+            # WTF??
+            # emoticons = re.findall('(?::|;|=)(?:-)?(?:\)|\(|D|P)', text)
+            # text = re.sub('[\W]+', ' ', text.lower()) + ''.join(emoticons).replace('-', '')
+            return text.lower()
         except TypeError as e:
             print("Received: %s – %s" % (type(text), text))
             raise
