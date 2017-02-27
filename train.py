@@ -70,15 +70,9 @@ def calculate_performance(trained, testing, X, y,
     print('Accuracy: ', metrics.accuracy_score(y, predicted))
     return predicted
 
-def train(name, quick_mode=False):
+def train(name):
     data_pipeline = DataPipeline
-    suffix = ''
-    if quick_mode:
-        data_pipeline = FastDataPipeline
-        X_train, X_test, y_train, y_test = load_and_split_quick(name)
-        sufix = '-quick'
-    else:
-        X_train, X_test, y_train, y_test = load_and_split(name)
+    X_train, X_test, y_train, y_test = load_and_split(name)
 
 
     X_after_processing = data_pipeline.fit_transform(X_train)
@@ -89,7 +83,7 @@ def train(name, quick_mode=False):
 
     predicted = calculate_performance(name, name, X_test, y_test,
                                      data_pipeline=data_pipeline)
-    store_results(name + suffix, y_test, predicted,
+    store_results(name, y_test, predicted,
                   data_pipeline=data_pipeline)
     calculate_other_performance(name)
 
