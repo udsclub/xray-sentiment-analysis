@@ -1,8 +1,12 @@
 # Team Z
 
-##
-- LoadModel
-- TrainModel
+## Files
+- `train.py` - load data, preproces, dumps model and print result
+- `load.py` - laod data, models, calculate and print performance
+
+- `TrainModel.ipynb` - train model notebook
+- `LoadModel.ipynb` - load model and calcalate score
+
 
 ## Формат данных
 
