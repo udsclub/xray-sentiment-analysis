@@ -1,8 +1,8 @@
 # Team Z
 
 ## Files
-- `train.py` - load data, preproces, dumps model and print result
-- `load.py` - laod data, models, calculate and print performance
+- [`train.py`](train.py) - train model, persist them and print result
+- [`load.py`](train.py) - load data, models, calculate and print performance
 
 - `TrainModel.ipynb` - train model notebook
 - `LoadModel.ipynb` - load model and calcalate score
