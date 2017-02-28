@@ -1,6 +1,7 @@
 
 import pandas as pd
 import re
+from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
 
@@ -13,6 +14,7 @@ from sklearn.pipeline import Pipeline, FeatureUnion
 from pipeline.text_cleaner import TextCleaner
 from pipeline.stemmer import Stemmer
 from pipeline.dataframe_vectorizer import DataframeVectorizer
+from pipeline.lemmatizer import Lemmatizer
 
 from utils import dump_model, load_and_split, other_name, load_and_split_quick
 
@@ -23,10 +25,12 @@ import datetime
 #global
 DataPipeline = Pipeline(steps=[
         ('clean_words', TextCleaner(key='text')),
-        ('stem', Stemmer()),
-        ('vectorize', DataframeVectorizer(vectorizer=TfidfVectorizer()))])
+        ('lemmatizer', Lemmatizer()),
+        ('vectorize', DataframeVectorizer(vectorizer=CountVectorizer())),
+        ('tfidf', TfidfTransformer())
+        ])
 #global
-FastDataPipeline = Pipeline(steps=[('vectorize', DataframeVectorizer(vectorizer=TfidfVectorizer()))])
+FastDataPipeline = Pipeline(steps=[('vectorize', DataframeVectorizer(vectorizer=CountVectorizer()))])
 
 #global
 LearningPipeline = Pipeline(steps=[
