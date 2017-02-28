@@ -26,6 +26,7 @@ import datetime
 DataPipeline = Pipeline(steps=[
         ('clean_words', TextCleaner(key='text')),
         ('lemmatizer', Lemmatizer()),
+        ('stemmer', Stemmer()),
         ('vectorize', DataframeVectorizer(vectorizer=CountVectorizer())),
         ('tfidf', TfidfTransformer())
         ])
