@@ -1,11 +1,11 @@
-%load_ext autoreload
-%autoreload 2
+
 import pandas as pd
 import re
-from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
 
 from sklearn.linear_model import LogisticRegression
+from sklearn.linear_model import LogisticRegressionCV
 from sklearn.externals import joblib
 
 from sklearn.pipeline import Pipeline, FeatureUnion
@@ -24,13 +24,13 @@ import datetime
 DataPipeline = Pipeline(steps=[
         ('clean_words', TextCleaner(key='text')),
         ('stem', Stemmer()),
-        ('vectorize', DataframeVectorizer(vectorizer=CountVectorizer()))])
+        ('vectorize', DataframeVectorizer(vectorizer=TfidfVectorizer()))])
 #global
-FastDataPipeline = Pipeline(steps=[('vectorize', DataframeVectorizer(vectorizer=CountVectorizer()))])
+FastDataPipeline = Pipeline(steps=[('vectorize', DataframeVectorizer(vectorizer=TfidfVectorizer()))])
 
 #global
 LearningPipeline = Pipeline(steps=[
-    ('logistic', LogisticRegression())
+    ('logistic', LogisticRegressionCV(n_jobs=2,verbose=1))
 ])
 
 def dump_models(name, f1_score, time_mark,
