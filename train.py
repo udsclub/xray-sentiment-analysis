@@ -28,7 +28,6 @@ DataPipeline = Pipeline(steps=[
         ('lemmatizer', Lemmatizer()),
         ('stemmer', Stemmer()),
         ('vectorize', DataframeVectorizer(vectorizer=CountVectorizer())),
-        ('tfidf', TfidfTransformer())
         ])
 #global
 FastDataPipeline = Pipeline(steps=[('vectorize', DataframeVectorizer(vectorizer=CountVectorizer()))])
