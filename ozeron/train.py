@@ -40,10 +40,10 @@ LearningPipeline = Pipeline(steps=[
 def dump_models(name, f1_score, time_mark,
                 data_pipeline=DataPipeline,
                 learn_pipeline=LearningPipeline):
-    path = 'dumps/history/%s__%s__%s__' % (name, time_mark, f1_score)
+    path = '../dumps/history/%s__%s__%s__' % (name, time_mark, f1_score)
     dump_model(path + 'data.bin', data_pipeline)
     dump_model(path + 'learn.bin', learn_pipeline)
-    path = 'dumps/%s__' % (name)
+    path = '../dumps/%s__' % (name)
     dump_model(path + 'data.bin', data_pipeline)
     dump_model(path + 'learn.bin', learn_pipeline)
 

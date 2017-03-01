@@ -32,9 +32,9 @@ def calculate_stats(trained, testing):
 def perform(name):
     global DataPipeline
     global LearningPipeline
-    with open('dumps/%s__data.bin'% name, 'rb')  as f:
+    with open('../dumps/%s__data.bin'% name, 'rb')  as f:
         DataPipeline = pickle.load(f)
-    with open('dumps/%s__learn.bin' % name, 'rb')  as f:
+    with open('../dumps/%s__learn.bin' % name, 'rb')  as f:
         LearningPipeline = pickle.load(f)
 
     val_acc = calculate_stats(name, name)

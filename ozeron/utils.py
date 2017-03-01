@@ -13,14 +13,14 @@ def load_dumped(path):
     return result
 
 def load_and_split(name):
-    path = "data/%s.csv" % name
+    path = "../data/%s.csv" % name
     df = pd.read_csv(path, sep="|")
     return train_test_split(df[['text']], df['label'], test_size=0.2, random_state=42, stratify=df['label'])
 
 def load_and_split_quick(name):
-    path = "data/%s.csv" % name
+    path = "../data/%s.csv" % name
     df = pd.read_csv(path, sep="|")
-    processed = load_dumped("data/processed/%s.bin" % name)
+    processed = load_dumped("../data/processed/%s.bin" % name)
     return train_test_split(df[['text']], df['label'], test_size=0.2, random_state=42, stratify=df['label'])
 
 
