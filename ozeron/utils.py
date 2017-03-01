@@ -12,6 +12,11 @@ def load_dumped(path):
         result = pickle.load(f)
     return result
 
+def load_file(name):
+    path = "../data/%s.csv" % name
+    df = pd.read_csv(path, sep="|")
+    return df
+
 def load_and_split(name):
     path = "../data/%s.csv" % name
     df = pd.read_csv(path, sep="|")

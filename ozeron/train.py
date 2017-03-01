@@ -22,7 +22,7 @@ from sklearn import metrics
 import pickle
 import datetime
 
-STOPWORDS = ['a','an','by','did','does', 'was', 'were', 'i']
+STOPWORDS = ['a','an','by','did','does', 'was', 'were', 'i', 'the', 'and', 'if']
 
 #global
 DataPipeline = Pipeline(steps=[
