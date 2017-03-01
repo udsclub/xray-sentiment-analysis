@@ -22,12 +22,14 @@ from sklearn import metrics
 import pickle
 import datetime
 
+STOPWORDS = ['a','an','by','did','does', 'was', 'were', 'i']
+
 #global
 DataPipeline = Pipeline(steps=[
         ('clean_words', TextCleaner(key='text')),
         ('lemmatizer', Lemmatizer()),
         ('stemmer', Stemmer()),
-        ('vectorize', DataframeVectorizer(vectorizer=CountVectorizer())),
+        ('vectorize', DataframeVectorizer(vectorizer=CountVectorizer(ngram_range=(1, 2),stop_words=STOPWORDS))),
         ])
 #global
 FastDataPipeline = Pipeline(steps=[('vectorize', DataframeVectorizer(vectorizer=CountVectorizer()))])
