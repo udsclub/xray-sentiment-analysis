@@ -1,8 +1,8 @@
 # Team XRAY
 Passive Aggresive
-Mix Test Accuracy:  0.819179608151
-RT Test Accuracy:  0.787983627327
-IMDB Test Accuracy:  0.8832
+- Mix Test Accuracy:  0.819179608151
+- RT Test Accuracy:  0.787983627327
+- IMDB Test Accuracy:  0.8832
 
 - [`LoadMix.ipynb`](LoadMix.ipynb)
 - [`TrainMix.ipynb`](TrainMix.ipynb)
