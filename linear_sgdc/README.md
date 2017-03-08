@@ -21,4 +21,5 @@ https://drive.google.com/open?id=0B0NR6sIylAi1d18xdzJIX0llWjg
 #### Train/Test stages for MIX:
 
 | | Preprocess | val_acc on MIX(RT+IMDB) | test_acc on MIX | test_acc on IMDB | test_acc on RT
+| ------------- |:------------------ | :-----:|:--------:|:----|:--------:
 | 7 | 6 | 0.7770 | 0.7341 | 0.8958 | 0.7871
