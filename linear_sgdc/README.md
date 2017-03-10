@@ -17,7 +17,8 @@ https://drive.google.com/open?id=0B0NR6sIylAi1d18xdzJIX0llWjg
 | 5 | 3 + STOPWORDS + TfIdfTransformer() | 0.7345 | 0.8295 | 0.9015 | 0.7524
 | 6 | 5 + TfIdfTransformer(sublinear_tf=True) | 0.7319 | 0.8438 | 0.9059 | 0.7565
 
-STOPWORDS = ['a','an','by','did','does', 'was', 'were', 'i'] (INDIA TEAM)
+STOPWORDS by INDIA TEAM = 'a','an','by','did','does', 'was', 'were', 'i' 
+
 
 
 #### Train/Test stages for MIX:

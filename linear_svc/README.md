@@ -14,4 +14,4 @@
 | 6 | 6 + regExp | 0.8078 | 0.8638 | 0.9071 | 0.7379 
 
 
-STOPWORDS = ['a','an','by','did','does', 'was', 'were', 'i'] (INDIA TEAM)
+STOPWORDS by INDIA TEAM = 'a','an','by','did','does', 'was', 'were', 'i' 
