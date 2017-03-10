@@ -1,6 +1,10 @@
 ## LinearSVC
 
 
+pretrained model_mix LinearSVC (.pkl format)
+https://drive.google.com/file/d/0B0NR6sIylAi1V1RKTVlWMXdGSzQ/view?usp=sharing
+
+
 
 #### Train/Test stages:
 
@@ -13,5 +17,12 @@
 | 5 | 3 + STOPWORDS + C=0.04 | 0.8078 | 0.8646 | 0.9083 | 0.7383 
 | 6 | 6 + regExp | 0.8078 | 0.8638 | 0.9071 | 0.7379 
 
-
 STOPWORDS by INDIA TEAM = 'a','an','by','did','does', 'was', 'were', 'i' 
+
+
+
+#### Train/Test stages for MIX:
+
+| | Preprocess | val_acc on MIX(RT+IMDB) | test_acc on MIX | test_acc on IMDB | test_acc on RT
+| ------------- |:------------------ | :-----:|:--------:|:----|:--------:
+| 7 | 6 | 0.8365 | 0.9597 | 0.9796 | 0.9500
