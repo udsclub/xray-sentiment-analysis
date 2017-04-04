@@ -1,4 +1,4 @@
-### Results on the same domain ### 
+## Results on the same domain ##
 
 Data size | Amazon train <br/> 
 Validation| Amazon test <br/>
@@ -18,12 +18,22 @@ All|0.939|0.941|0.940|0.675|0.670|0.763|0.555|
 
 ---
 
-### Results on another domains ###  
+## Results on another domains ## 
 Model Parameters: Hashing Vectorizer, n_gram range = (1, 3), reg exp, stop words from Snowball Stemmer, train set is balanced.
 <br/>F1 score was calculated for negative reviews (` f1_score(pos_label = 0)`)
+
+### Trained on balanced data (380K reviews) ###
 
 |  Domain | Test Accuracy | F1 score|
  --------|:-----:|:----:|
 | Digital music|0.895|0.620|
  | Office products| 0.747|0.585|
  |Video games|0.840|0.606|
+
+### Trained on all data (1.3M reviews) ###
+
+|  Domain | Test Accuracy | F1 score|
+ --------|:-----:|:----:|
+| Digital music|0.947|0.650|
+ | Office products| 0.928|0.615|
+ |Video games|0.915|0.666|
