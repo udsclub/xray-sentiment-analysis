@@ -72,7 +72,7 @@ Validation Accuracy
 
 ## Step 4
 
-### LogisticRegression [ipynb](https://github.com/udsclub/xray-sentiment-analysis/tree/master/logistic regression final)  
+### LogisticRegression [ipynb](https://github.com/udsclub/xray-sentiment-analysis/tree/master/logistic%20regression%20final)  
 
 
 | Step | Preprocess | RT+IMDB | RT | IMDB
@@ -87,7 +87,7 @@ Validation Accuracy
 
 ## Step 5
 
-### LogisticRegression [ipynb](https://github.com/udsclub/xray-sentiment-analysis/tree/master/logistic regression final/Amazon Movies and TV)  
+### LogisticRegression [ipynb](https://github.com/udsclub/xray-sentiment-analysis/tree/master/logistic%20regression%20final/Amazon%20Movies%20and%20TV)  
 ** Amazon Movies and TV (1.3M reviews) **
 
 ### Results on the same domain
